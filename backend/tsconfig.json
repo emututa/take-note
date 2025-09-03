@@ -1,0 +1,20 @@
+
+
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "commonjs",               // classic Node CJS, no .js needed
+    "moduleResolution": "node",         // Node-style import resolution
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "strict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "types": ["node"],
+    "skipLibCheck": true,
+    "ignoreDeprecations": "6.0"         // silence the warning
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
+}
