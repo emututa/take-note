@@ -2,19 +2,26 @@
 
 {
   "compilerOptions": {
-    "target": "ES2020",
-    "module": "commonjs",               // classic Node CJS, no .js needed
-    "moduleResolution": "node",         // Node-style import resolution
-    "rootDir": "./src",
-    "outDir": "./dist",
-    "strict": true,
-    "esModuleInterop": true,
+    /* Language & Environment */
+    "target": "ES2020",                   // Modern JS features
+    "module": "commonjs",                 // Node.js compatible modules
+    "moduleResolution": "node",           // Resolve like Node.js
+
+    /* Paths */
+    "rootDir": "./src",                   // Your TS source code
+    "outDir": "./dist",                   // Compiled JS output
+
+    /* Type Checking */
+    "strict": true,                       // Enable all strict type checks
+    "esModuleInterop": true,              // Allow default imports from CJS modules
     "forceConsistentCasingInFileNames": true,
-    "resolveJsonModule": true,
-    "types": ["node"],
-    "skipLibCheck": true,
-    "ignoreDeprecations": "6.0"         // silence the warning
+    "skipLibCheck": true,                 // Faster builds, skip .d.ts checks
+    "ignoreDeprecations": "6.0",          // Silence TS 6 deprecation warnings
+
+    /* Extras */
+    "resolveJsonModule": true,            // Import .json files
+    "types": ["node"]                     // Load Node.js typings
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "dist"]
+  "include": ["src"],                     // Compile all TS in src/
+  "exclude": ["node_modules", "dist"]     // Ignore dependencies & build output
 }
